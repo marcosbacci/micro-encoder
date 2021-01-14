@@ -3,7 +3,6 @@ package repositories
 import (
 	"encoder/domain"
 	"fmt"
-
 	"github.com/jinzhu/gorm"
 	uuid "github.com/satori/go.uuid"
 )
@@ -34,6 +33,7 @@ func (repo VideoRepositoryDb) Insert(video *domain.Video) (*domain.Video, error)
 	}
 
 	return video, nil
+
 }
 
 func (repo VideoRepositoryDb) Find(id string) (*domain.Video, error) {
@@ -46,4 +46,5 @@ func (repo VideoRepositoryDb) Find(id string) (*domain.Video, error) {
 	}
 
 	return &video, nil
+
 }

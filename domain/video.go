@@ -1,9 +1,8 @@
 package domain
 
 import (
-	"time"
-
 	"github.com/asaskevich/govalidator"
+	"time"
 )
 
 type Video struct {
@@ -23,9 +22,10 @@ func NewVideo() *Video {
 }
 
 func (video *Video) Validate() error {
-	valid, err := govalidator.ValidateStruct(video)
 
-	if !valid {
+	_, err := govalidator.ValidateStruct(video)
+
+	if err != nil {
 		return err
 	}
 

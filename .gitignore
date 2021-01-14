@@ -1,0 +1,7 @@
+.idea
+.env
+.vscode
+.git
+bucket-credential.json
+.pgdata
+.devcontainer
